@@ -129,7 +129,7 @@ def format_leaderboard_section(data, title, header_text):
 </div>"""
     return section
 
-def format_leaderboard_wikitext(solo_data, bosses_data, duo_data):
+def format_leaderboard_wikitext(solo_glitchless_data, solo_data, solo_tas_data):
     wikitext = """❗ NOTE: Speedrun data is automatically updated every 6 hours from [https://www.speedrun.com/Abyssus_ speedrun.com].<br>
 [[File:Discord_Icon.png|20x20px|link=https://discord.gg/z9KA7jSyFv]] Visit the official Abyssus Speedrunning Discord here: [https://discord.gg/z9KA7jSyFv Abyssus Speedrunning].
 
@@ -139,11 +139,11 @@ def format_leaderboard_wikitext(solo_data, bosses_data, duo_data):
 
 """
     
-    wikitext += format_leaderboard_section(solo_data, "Solo DW 0", "Solo | DW 0")
+    wikitext += format_leaderboard_section(solo_glitchless_data, "Solo Glitchless", "Solo | Glitchless")
     wikitext += "\n"
-    wikitext += format_leaderboard_section(bosses_data, "Solo All Bosses DW 0", "Solo | All Bosses | DW 0") 
+    wikitext += format_leaderboard_section(solo_data, "Solo", "Solo") 
     wikitext += "\n"
-    wikitext += format_leaderboard_section(duo_data, "Duo DW 0", "Duo | DW 0")
+    wikitext += format_leaderboard_section(solo_tas_data, "Solo TAS", "Solo | TAS")
     
     wikitext += """
 
