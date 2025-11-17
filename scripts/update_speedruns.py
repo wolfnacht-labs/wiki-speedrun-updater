@@ -229,11 +229,11 @@ def main():
         sys.exit(1)
     
     # Fetch data for all three categories
-    solo_data = get_speedrun_data("mke0v8xd", "var-wl3vge98=192y4myq&var-ylq40y7n=lr34w8ol")
-    bosses_data = get_speedrun_data("jdr59zgk", "var-9l7g49pl=q65r4n7l&var-ylq40y7n=lr34w8ol")
-    duo_data = get_speedrun_data("5dwl9vn2", "var-j84p3vj8=lr34zpol&var-ylq40y7n=lr34w8ol")
+    solo_glitchless_data = get_speedrun_data("9kvve33k", "var-yn26e6dl=qoxpy3xq&var-6njpwpen=lx5px841&var-ql6959vl=1dkz4y5l")
+    solo_data = get_speedrun_data("9kvve33k", "var-yn26e6dl=qoxpy3xq&var-6njpwpen=q5vno52l&var-ql6959vl=1dkz4y5l")
+    solo_tas_data = get_speedrun_data("xd1ynozd", "var-ql6959vl=1dkz4y5l")
     
-    wikitext = format_leaderboard_wikitext(solo_data, bosses_data, duo_data)
+    wikitext = format_leaderboard_wikitext(solo_glitchless_data, solo_data, solo_tas_data)
     
     try:
         session = login_to_wiki()
